@@ -10,6 +10,7 @@ function romanToInt(s: string): number {
     }
 
     let total = 0
+    
 
     for (let i = 0; i < s.length; i++) {
         if (roman[s[i + 1]] > roman[s[i]]) {
