@@ -16,31 +16,11 @@ function romanToInt(s: string): number {
         const next = i + 1
         let aux = roman[list[i]]
 
-        if (list[i] === 'I') {
-            if (list[next] === 'V') {
-                aux = 4
-                i++
-            } else if (list[next] === 'X') {
-                aux = 9
-                i++
-            }
-        } else if (list[i] === 'X') {
-            if (list[next] === 'L') {
-                aux = 40
-                i++
-            } else if (list[next] === 'C') {
-                aux = 90
-                i++
-            }
-        } else if (list[i] === 'C') {
-            if (list[next] === 'D') {
-                aux = 400
-                i++
-            } else if (list[next] === 'M') {
-                aux = 900
-                i++
-            }
+        if(list[next] && roman[list[next]] > roman[list[i]]){
+            aux = roman[list[next]] - roman[list[i]]
+            i++
         }
+
 
         total = total + aux
     }
