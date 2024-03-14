@@ -1,1 +1,1 @@
-# hackerRankChallenges
+# Dev Challenges
