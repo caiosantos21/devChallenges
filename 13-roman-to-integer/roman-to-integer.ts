@@ -9,20 +9,16 @@ function romanToInt(s: string): number {
         M: 1000
     }
 
-    const list = s.split('')
     let total = 0
 
-    for (let i = 0; i < list.length; i++) {
-        const next = i + 1
-        let aux = roman[list[i]]
-
-        if(list[next] && roman[list[next]] > roman[list[i]]){
-            aux = roman[list[next]] - roman[list[i]]
+    for (let i = 0; i < s.length; i++) {
+        if (roman[s[i + 1]] > roman[s[i]]) {
+            total += roman[s[i + 1]] - roman[s[i]]
             i++
+        } else {
+            total += roman[s[i]]
         }
 
-
-        total = total + aux
     }
 
     return total
