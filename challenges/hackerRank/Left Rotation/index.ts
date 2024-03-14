@@ -1,5 +1,9 @@
 "use strict";
 
+/**
+ * URL https://www.hackerrank.com/challenges/array-left-rotation/problem?isFullScreen=true
+ */
+
 const fs = require("fs");
 
 process.stdin.resume();

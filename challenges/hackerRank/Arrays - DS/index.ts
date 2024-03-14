@@ -1,5 +1,9 @@
 "use strict";
 
+/**
+ * URL https://www.hackerrank.com/challenges/arrays-ds/problem?isFullScreen=true
+ */
+
 import { WriteStream, createWriteStream } from "fs";
 process.stdin.resume();
 process.stdin.setEncoding("utf-8");
