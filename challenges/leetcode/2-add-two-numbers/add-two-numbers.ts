@@ -22,8 +22,6 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
 
         node.val = sum >= 10 ? sum - 10 : sum
 
-        console.log(a1.val, a2.val, sum, newExtra, node.val)
-
         if (a1.next && a2.next) {
             node.next = handleSum(a1.next, a2.next, newExtra)
         }
