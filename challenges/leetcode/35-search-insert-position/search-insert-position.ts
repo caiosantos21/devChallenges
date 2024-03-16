@@ -1,26 +1,19 @@
 function searchInsert(nums: number[], target: number): number {
-    let ind = -1
-    let start = 0
-    let mid = Math.floor(nums.length/2)
-    let end = nums.length
-
-    if(nums[mid]<target){
-        start = mid
+    if (nums[nums.length - 1] < target) {
+        return nums.length
     }
 
-    for (let i = start; i < end; i++) {
+    if (nums[0] >= target) {
+        return 0
+    }
 
+    let a = 1
+    for (let i = 1; i <= nums.length - 1; i++) {
         if (nums[i] >= target) {
-            ind = i
+            a = i
             break
         }
-
-        if (nums[i] < target && (target < nums[i + 1] || i + 1 === nums.length)) {
-            ind = i + 1
-            break
-        }
-
     }
 
-    return ind
+    return a
 };
