@@ -1,8 +1,15 @@
 function searchInsert(nums: number[], target: number): number {
     let ind = -1
+    let start = 0
+    let mid = Math.floor(nums.length/2)
+    let end = nums.length
 
-    for (let i = 0; i < nums.length; i++) {
-    
+    if(nums[mid]<target){
+        start = mid
+    }
+
+    for (let i = start; i < end; i++) {
+
         if (nums[i] >= target) {
             ind = i
             break
