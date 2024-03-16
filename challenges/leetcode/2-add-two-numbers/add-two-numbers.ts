@@ -18,11 +18,9 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
         const node = new ListNode()
 
         const sum = a1.val + a2.val + extra
-        const newExtra = ~~(sum / 10)
-        // const newExtra = sum >= 10 ? 1 : 0
+        const newExtra = sum >= 10 ? 1 : 0
 
-        node.val = sum % 10
-        // node.val = sum >= 10 ? sum - 10 : sum
+        node.val = sum >= 10 ? sum - 10 : sum
 
         if (a1.next && a2.next) {
             node.next = handleSum(a1.next, a2.next, newExtra)
@@ -37,7 +35,7 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
             const aux = new ListNode()
             node.next = handleSum(aux, a2.next, newExtra)
         }
-        if (!a1.next && !a2.next && newExtra > 0) {
+        if (!a1.next && !a2.next && newExtra>0) {
             const aux = new ListNode()
             node.next = handleSum(aux, aux, newExtra)
         }
