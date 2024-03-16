@@ -7,13 +7,12 @@ function searchInsert(nums: number[], target: number): number {
         return 0
     }
 
-    let a = 1
+
     for (let i = 1; i <= nums.length - 1; i++) {
         if (nums[i] >= target) {
-            a = i
-            break
+            return i
         }
     }
 
-    return a
+
 };
