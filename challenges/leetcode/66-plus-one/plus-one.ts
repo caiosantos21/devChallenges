@@ -11,6 +11,8 @@ function plusOne(digits: number[]): number[] {
         digits[i] = sum % 10
 
     }
+
+    return aux > 0 ? [aux,...digits] : digits
     
     if (aux > 0) {
         digits.unshift(aux)
