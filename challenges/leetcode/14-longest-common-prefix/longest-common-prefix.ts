@@ -3,19 +3,19 @@ function longestCommonPrefix(strs: string[]): string {
         return ''
     }
     
-    const b = strs[0]
+   
 
-    for (let i = 0; i < b.length; i++) {
+    for (let i = 0; i < strs[0].length; i++) {
         for (let j = 1; j < strs.length; j++) {
-            if (i === b.length) {
-                return b
+            if (i === strs[0].length) {
+                return strs[0]
             }
 
-            if (b[i] != strs[j][i]) {
-                return b.slice(0, i)
+            if (strs[0][i] != strs[j][i]) {
+                return strs[0].slice(0, i)
             }
         }
     }
 
-    return b
+    return strs[0]
 };
