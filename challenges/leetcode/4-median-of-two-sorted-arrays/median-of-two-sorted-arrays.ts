@@ -7,7 +7,7 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
             return arr[0]
         }
         const half = ~~(arr.length / 2)
-        console.log(arr, half)
+ 
         if (arr.length % 2 === 0) {
             return (arr[half] + arr[half - 1]) / 2
         }
