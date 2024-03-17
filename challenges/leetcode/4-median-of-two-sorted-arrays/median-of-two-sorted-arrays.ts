@@ -3,9 +3,9 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
     var n = nums2.length;
 
     const getMedian = (arr: number[]) => {
-        if (arr.length === 1) {
-            return arr[0]
-        }
+        // if (arr.length === 1) {
+        //     return arr[0]
+        // }
         const half = ~~(arr.length / 2)
  
         if (arr.length % 2 === 0) {
