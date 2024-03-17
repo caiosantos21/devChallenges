@@ -1,7 +1,7 @@
 function plusOne(digits: number[]): number[] {
-    // if (digits.length === 0) {
-    //     return []
-    // }
+    if (digits.length === 0) {
+        return []
+    }
 
 
     let aux = 0
@@ -11,7 +11,7 @@ function plusOne(digits: number[]): number[] {
         digits[i] = sum % 10
 
     }
-
+    
     if (aux > 0) {
         digits.unshift(aux)
     }
