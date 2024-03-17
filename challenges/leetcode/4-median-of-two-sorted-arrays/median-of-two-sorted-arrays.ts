@@ -31,20 +31,16 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
     while (i <= nums1.length && j <= nums2.length) {
         if (nums1[i] && nums2[j]===undefined) {
             arr[arr.length] = nums1[i]
-            // arr.push(nums1[i])
             i++
         }
         else if (nums1[i]===undefined && nums2[j]) {
             arr[arr.length] = nums2[j]
-            // arr.push(nums2[j])
             j++
         } else if (nums1[i] < nums2[j]) {
             arr[arr.length] = nums1[i]
-            // arr.push(nums1[i])
             i++
         } else if (nums1[i] >= nums2[j]) {
             arr[arr.length] = nums2[j]
-            // arr.push(nums2[j])
             j++
         } else {
             i++
