@@ -1,11 +1,5 @@
 function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
-    var m = nums1.length;
-    var n = nums2.length;
-
     const getMedian = (arr: number[]) => {
-        // if (arr.length === 1) {
-        //     return arr[0]
-        // }
         const half = ~~(arr.length / 2)
  
         if (arr.length % 2 === 0) {
@@ -16,16 +10,16 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
         }
     }
 
-    if (m === 0 && n === 0) {
+    if (nums1.length === 0 && nums2.length === 0) {
         return 0
     }
 
 
-    if (m > 0 && n === 0) {
+    if (nums1.length > 0 && nums2.length === 0) {
         return getMedian(nums1)
     }
 
-    if (m === 0 && n > 0) {
+    if (nums1.length === 0 && nums2.length > 0) {
         return getMedian(nums2)
     }
 
@@ -34,19 +28,23 @@ function findMedianSortedArrays(nums1: number[], nums2: number[]): number {
     let j = 0;
     let arr = []
 
-    while (i <= m && j <= n) {
+    while (i <= nums1.length && j <= nums2.length) {
         if (nums1[i] && nums2[j]===undefined) {
-            arr.push(nums1[i])
+            arr[arr.length] = nums1[i]
+            // arr.push(nums1[i])
             i++
         }
         else if (nums1[i]===undefined && nums2[j]) {
-            arr.push(nums2[j])
+            arr[arr.length] = nums2[j]
+            // arr.push(nums2[j])
             j++
         } else if (nums1[i] < nums2[j]) {
-            arr.push(nums1[i])
+            arr[arr.length] = nums1[i]
+            // arr.push(nums1[i])
             i++
         } else if (nums1[i] >= nums2[j]) {
-            arr.push(nums2[j])
+            arr[arr.length] = nums2[j]
+            // arr.push(nums2[j])
             j++
         } else {
             i++
