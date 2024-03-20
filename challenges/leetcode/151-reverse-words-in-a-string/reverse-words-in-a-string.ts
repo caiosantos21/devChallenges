@@ -1,5 +1,4 @@
 function reverseWords(s: string): string {
-    s.trim()
     let aux = s.split(' ')
     let r = []
 
