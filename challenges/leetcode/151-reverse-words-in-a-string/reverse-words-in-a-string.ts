@@ -9,5 +9,5 @@ function reverseWords(s: string): string {
         }
     }
 
-    return r.join(' ').trim()
+    return r.join(' ')
 };
