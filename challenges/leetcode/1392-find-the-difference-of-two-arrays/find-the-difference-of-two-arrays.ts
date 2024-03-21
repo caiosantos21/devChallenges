@@ -4,6 +4,7 @@ function findDifference(nums1: number[], nums2: number[]): number[][] {
     const check = (i: number, arr1: number[], arr2: number[], key: number) => {
         if (i < arr1.length && arr2.indexOf(arr1[i]) === -1 && m1.get(key).indexOf(arr1[i]) === -1) {
             m1.set(key, [...m1.get(key), arr1[i]])
+            
         }
     }
 
