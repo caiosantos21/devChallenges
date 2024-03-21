@@ -5,8 +5,5 @@ function uniqueOccurrences(arr: number[]): boolean {
         mp.set(arr[i], (mp.get(arr[i]) || 0) + 1)
     }
 
-    const a = new Set([...mp.values()])
-
-
-    return a.size === mp.size
+    return (new Set([...mp.values()])).size === mp.size
 };
