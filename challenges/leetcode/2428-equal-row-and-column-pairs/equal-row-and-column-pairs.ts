@@ -1,11 +1,10 @@
 function equalPairs(grid: number[][]): number {
     let m1 = new Map()
     let m2 = new Map()
+    let row = ''
+    let col = ''
 
     for (let i = 0; i < grid.length; i++) {
-        let row = ''
-        let col = ''
-
         for (let j = 0; j < grid.length; j++) {
             row += (j > 0 ? '.' : '') + grid[i][j]
             col += (j > 0 ? '.' : '') + grid[j][i]
@@ -13,6 +12,8 @@ function equalPairs(grid: number[][]): number {
 
         m1.set(row, (m1.get(row) || 0) + 1)
         m2.set(col, (m2.get(col) || 0) + 1)
+        row = ''
+        col = ''
     }
 
     let total = 0
