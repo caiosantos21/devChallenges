@@ -14,12 +14,12 @@ function guessNumber(n: number): number {
 
     while (min <= max) {
         let mid = min + (~~((max - min) / 2))
-        
+
         if (guess(mid) === 0) {
             return mid
         } else if (guess(mid) === -1) {
             max = mid - 1
-        } else if (guess(mid) === 1) {
+        } else  {
             min = mid + 1
         }
 
