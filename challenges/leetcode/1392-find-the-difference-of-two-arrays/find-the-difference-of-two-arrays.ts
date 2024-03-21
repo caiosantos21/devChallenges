@@ -12,6 +12,9 @@ function findDifference(nums1: number[], nums2: number[]): number[][] {
         i < nums1.length && check(nums1[i], nums2, m1)
         i < nums2.length && check(nums2[i], nums1, m2)
     }
+    let arr = []
+    arr.push([...m1.keys()])
+    arr.push([...m2.keys()])
 
-    return [[...m1.keys()], [...m2.keys()]]
+    return arr
 };
