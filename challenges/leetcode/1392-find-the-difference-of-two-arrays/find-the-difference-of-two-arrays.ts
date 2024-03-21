@@ -9,13 +9,15 @@ function findDifference(nums1: number[], nums2: number[]): number[][] {
 
     for (let i = 0; i < nums1.length; i++) {
         check(nums1[i], nums2, 0)
-        // i < nums2.length && check(nums2[i], nums1, 1)
     }
 
     for (let i = 0; i < nums2.length; i++) {
-        // i < nums1.length && check(nums1[i], nums2, 0)
         check(nums2[i], nums1, 1)
     }
+    let arr = []
+    m1.forEach((v,k)=>{
+        arr[k] = v
+    })
 
-    return [...m1.values()]
+    return arr
 };
