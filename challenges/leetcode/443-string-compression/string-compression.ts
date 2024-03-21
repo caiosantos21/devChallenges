@@ -1,8 +1,6 @@
 function compress(chars: string[]): number {
-    const mp = new Map()
     const arr = []
     let aux = 1
-
 
     for (let i = 0; i <= chars.length; i++) {
         if (chars[i] === chars[i + 1]) {
