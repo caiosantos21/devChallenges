@@ -1,21 +1,20 @@
 function findDifference(nums1: number[], nums2: number[]): number[][] {
-    let s1 = new Set(nums1)
-    let s2 = new Set(nums2)
-    let arr = [[], []]
+    let s1 = new Set([])
+    let s2 = new Set([])
 
-    const a = [...s1.values()]
-    const b = [...s2.values()]
-
-    for (let i = 0; i < Math.max(s1.size, s2.size); i++) {
-        if (i < s1.size && !s2.has(a[i])) {
-            arr[0].push(a[i])
+    nums1.forEach((n1) => {
+        if (nums2.indexOf(n1) === -1) {
+            s1.add(n1)
         }
-        if (i < s2.size && !s1.has(b[i])) {
-            arr[1].push(b[i])
-        }
-    }
+    })
 
-    return arr
+    nums2.forEach((n2) => {
+        if (nums1.indexOf(n2) === -1) {
+            s2.add(n2)
+        }
+    })
+
+    return [[...s1.keys()], [...s2.keys()]]
 
     // return [[...s1.difference(s2)], [...s2.difference(s1)]]
     // let m1 = new Map()
