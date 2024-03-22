@@ -2,7 +2,7 @@ function isSubsequence(s: string, t: string): boolean {
     if (s === t) {
         return true
     }
-    
+
     if (s.length > t.length) {
         return false
     }
@@ -21,6 +21,8 @@ function isSubsequence(s: string, t: string): boolean {
             return true
         }
     }
+
+    
 
     return false
 };
