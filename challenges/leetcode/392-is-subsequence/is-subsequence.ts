@@ -8,21 +8,16 @@ function isSubsequence(s: string, t: string): boolean {
     }
 
     let i = 0
-    let j = 0
 
-    while (j < t.length) {
+    for (let j = 0; j < t.length; j++) {
         if (s[i] === t[j]) {
             i++
         }
-
-        j++
 
         if (i === s.length) {
             return true
         }
     }
-
     
-
     return false
 };
