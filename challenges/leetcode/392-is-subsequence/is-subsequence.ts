@@ -1,23 +1,13 @@
 function isSubsequence(s: string, t: string): boolean {
-    if (s === t) {
-        return true
-    }
-
-    if (s.length > t.length) {
-        return false
-    }
-
     let i = 0
+    let j = 0
 
-    for (let j = 0; j < t.length; j++) {
+    while (i < s.length && j < t.length) {
         if (s[i] === t[j]) {
             i++
         }
-
-        if (i === s.length) {
-            return true
-        }
+        j++
     }
-    
-    return false
+
+    return i === s.length
 };
